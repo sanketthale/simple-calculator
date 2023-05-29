@@ -1,0 +1,37 @@
+<div class="calculator">
+  <h2>Calculator</h2>
+
+  <div class="display-container">
+    <input type="text" class="input-display" [(ngModel)]="display" readonly>
+    <div class="add-button">
+      <button class="add-btn" (click)="onAddButtonClick()"> + </button>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <div class="row">
+      <button class="num-button" (click)="appendNumber(7)">7</button>
+      <button class="num-button" (click)="appendNumber(8)">8</button>
+      <button class="num-button" (click)="appendNumber(9)">9</button>
+    </div>
+    <div class="row">
+      <button class="num-button" (click)="appendNumber(4)">4</button>
+      <button class="num-button" (click)="appendNumber(5)">5</button>
+      <button class="num-button" (click)="appendNumber(6)">6</button>
+    </div>
+    <div class="row">
+      <button class="num-button" (click)="appendNumber(1)">1</button>
+      <button class="num-button" (click)="appendNumber(2)">2</button>
+      <button class="num-button" (click)="appendNumber(3)">3</button>
+    </div>
+    <div class="row">
+      <button class="num-button" (click)="appendNumber(0)">0</button>
+      <button class="num-button" (click)="clear()">C</button>
+      <button class="num-button" (click)="onEnterButton()"> = </button>
+    </div>
+  </div>
+
+  <div class="result">
+    <p>Result: {{ getResult() }}</p>
+  </div>
+</div>
